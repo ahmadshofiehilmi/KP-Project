@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.list.CategoryLaptop.LaptopCategory">
+
+
+    <com.github.ilyagh.TypewriterRefreshLayout
+        android:id="@+id/pulltoRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="62dp">
+
+        <ListView
+            android:id="@+id/listProduk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </com.github.ilyagh.TypewriterRefreshLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_search"
+        app:elevation="6dp"
+        app:fabSize="auto"
+        app:layout_anchor="@+id/pulltoRefresh"
+        app:layout_anchorGravity="right|bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.986"
+        app:pressedTranslationZ="12dp" />
+    <include layout="@layout/bottomsheet_list"/>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomsheetlist"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    tools:context=".module.list.BottomSheetdialog"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="60dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:text="Category"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/battery"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/batre"
+            android:padding="0dp"
+            android:src="@drawable/battery"
+            android:clickable="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Battery"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/cpu"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/cpu"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="CPU"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/hdmi"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/hdmi"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="HDMI"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/headphone"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/headphone"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Headphone"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/keyboard"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/keyboard"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Keyboard"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/laptop"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/laptop"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Laptop"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/mobo"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/motherboard"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Motherboard"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/monitor"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/monitor"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Monitor"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/mouse"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/mouse"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Mouse"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/powercable"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/powercable"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="PowerCable"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/printer"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/printer"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Printer"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/processor"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/chip"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Processor"
+            android:layout_marginLeft="32dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

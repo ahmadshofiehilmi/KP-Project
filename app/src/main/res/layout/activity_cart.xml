@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/row_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_main"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Your Order"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/btnResetCart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnResetCart" />
+
+            <Button
+                android:id="@+id/btnResetCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/yellow_button"
+                android:elevation="0dp"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:padding="6dp"
+                android:text="Delete All"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnResetCart" />
+
+            <TextView
+                android:id="@+id/tv_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Favorite"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_cart" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_wish_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_favorite" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/bottomCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_wish_list"
+                app:layout_constraintVertical_bias="0.0">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/layFooter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/lblSubtotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:text="Subtotal"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvSubtotal"
+                            app:layout_constraintEnd_toStartOf="@+id/tvSubtotal"
+                            app:layout_constraintTop_toTopOf="@+id/tvSubtotal" />
+
+                        <TextView
+                            android:id="@+id/tvSubtotal"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvDiskon"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed"
+                            tools:text="Rp 128.000" />
+
+                        <TextView
+                            android:id="@+id/lblDiskon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discount"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvDiskon"
+                            app:layout_constraintEnd_toEndOf="@+id/lblSubtotal"
+                            app:layout_constraintTop_toTopOf="@+id/tvDiskon" />
+
+                        <TextView
+                            android:id="@+id/tvDiskon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@+id/tvHargaFinal"
+                            app:layout_constraintEnd_toEndOf="@+id/tvSubtotal"
+                            app:layout_constraintStart_toStartOf="@+id/tvSubtotal"
+                            app:layout_constraintTop_toBottomOf="@+id/tvSubtotal"
+                            tools:text="Rp 128.000" />
+
+                        <TextView
+                            android:id="@+id/tvHargaFinal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/btnCheckOut"
+                            app:layout_constraintEnd_toEndOf="@+id/tvDiskon"
+                            app:layout_constraintStart_toStartOf="@+id/tvDiskon"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDiskon"
+                            tools:text="Rp 120.000" />
+
+                        <TextView
+                            android:id="@+id/lblHargaFinal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Price"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvHargaFinal"
+                            app:layout_constraintEnd_toEndOf="@+id/lblDiskon"
+                            app:layout_constraintTop_toTopOf="@+id/tvHargaFinal" />
+
+                        <Button
+                            android:id="@+id/btnCheckOut"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/yellow"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:padding="10dp"
+                            android:text="Buat Pesanan"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_main" />
+</android.support.constraint.ConstraintLayout>

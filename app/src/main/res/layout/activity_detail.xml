@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEFF3"
+    tools:context=".module.list.DetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            >
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/img_produk"
+                android:layout_width="match_parent"
+                android:contentDescription="@string/app_name"
+                app:layout_collapseMode="parallax"
+                android:layout_height="350dp"
+                android:src ="@drawable/produkbattery"/>
+            <!--<ImageView-->
+            <!--android:id="@+id/img_produk"-->
+            <!--app:layout_collapseMode="parallax"-->
+            <!--android:src="@drawable/nature"-->
+            <!--android:contentDescription="@string/app_name"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="350dp" />-->
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:title="@string/recent_news"
+                app:layout_collapseMode="pin"
+                />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/title_product"
+                    android:padding="12dp"
+                    android:textSize="20sp"
+                    android:layout_marginTop="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryText"
+                    android:text="@string/recent_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/desc_product"
+                    android:padding="12dp"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/in_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/favorite_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:clickable="true"
+        android:src="@drawable/ic_action_heart"
+        app:elevation="6dp"
+        app:fabSize="auto"
+        app:layout_anchor="@+id/app_bar_layout"
+        app:layout_anchorGravity="right|bottom"
+        app:pressedTranslationZ="12dp" />
+
+
+    <!--<Button-->
+        <!--android:id="@+id/buy"-->
+        <!--android:layout_gravity="bottom|center"-->
+        <!--android:clickable="true"-->
+        <!--android:text="BUY"-->
+        <!--android:textSize="25sp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp" />-->
+
+    <android.support.v7.widget.CardView
+        android:layout_gravity="bottom|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="2dp"
+        app:cardUseCompatPadding="false"
+        app:elevation="5dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_decrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:width="48dp"
+                android:height="48dp"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:background="@color/yellow"
+                android:minHeight="0dp"
+                android:text="-"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/edt_jumlah"
+                android:layout_width="56dp"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:hint="0"
+                android:inputType="number"
+                android:text="1"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_decrease"
+                app:layout_constraintStart_toEndOf="@+id/btn_decrease"
+                app:layout_constraintTop_toTopOf="@+id/btn_decrease" />
+
+            <Button
+                android:id="@+id/btn_increase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="48dp"
+                android:height="48dp"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="+"
+                android:textSize="18sp"
+                android:background="@color/yellow"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edt_jumlah"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@color/yellow"
+                android:text="Beli"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.design.widget.CoordinatorLayout>

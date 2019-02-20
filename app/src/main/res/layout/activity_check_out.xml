@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.checkout.CheckOutActivity">
+
+    <include
+        android:id="@+id/layToolbar"
+        layout="@layout/row_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layToolbar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/address"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnGantiAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@color/transparent"
+                        android:focusable="true"
+                        android:minHeight="0dp"
+                        android:padding="4dp"
+                        android:text="@string/change_address"
+                        android:textColor="@color/yellow"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvAlamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv1"
+                        tools:text="@string/lorem_ipsum" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/cardAlamat"
+                app:layout_constraintStart_toStartOf="@+id/cardAlamat"
+                app:layout_constraintTop_toBottomOf="@+id/cardAlamat">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/list_product"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="MissingConstraints" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+                    <TextView
+                        android:id="@+id/tvLblSubtotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rvProduct"
+                        android:text="@string/subtotal"
+                        app:layout_constraintEnd_toEndOf="@+id/tvLblTotal"
+                        app:layout_constraintStart_toStartOf="@+id/tvLblDiskon"
+                        app:layout_constraintTop_toTopOf="@+id/tvSubtotal" />
+
+                    <TextView
+                        android:id="@+id/tvSubtotal"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rvProduct"
+                        android:layout_marginTop="16dp"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintEnd_toEndOf="@+id/rvProduct"
+                        app:layout_constraintTop_toBottomOf="@+id/rvProduct"
+                        tools:text="Rp 200.000" />
+
+                    <TextView
+                        android:id="@+id/tvLblDiskon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rvProduct"
+                        android:text="@string/discount"
+                        app:layout_constraintEnd_toEndOf="@+id/tvLblTotal"
+                        app:layout_constraintStart_toStartOf="@+id/tvLblTotal"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSubtotal" />
+
+                    <TextView
+                        android:id="@+id/tvDiskon"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rvProduct"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintEnd_toEndOf="@+id/rvProduct"
+                        app:layout_constraintStart_toStartOf="@+id/tvSubtotal"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSubtotal"
+                        tools:text="Rp 200.000" />
+
+                    <TextView
+                        android:id="@+id/tvLblTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rvProduct"
+                        android:text="@string/total_payment"
+                        app:layout_constraintEnd_toStartOf="@+id/tvDiskon"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDiskon" />
+
+                    <TextView
+                        android:id="@+id/tvTotal"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rvProduct"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintEnd_toEndOf="@+id/rvProduct"
+                        app:layout_constraintStart_toStartOf="@+id/tvDiskon"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDiskon"
+                        tools:text="Rp 200.000" />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardMetodePembayaran"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/cardProduct"
+                app:layout_constraintStart_toStartOf="@+id/cardProduct"
+                app:layout_constraintTop_toBottomOf="@+id/cardProduct">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/method_payment" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/cod"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardNote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/cardMetodePembayaran"
+                app:layout_constraintStart_toStartOf="@+id/cardMetodePembayaran"
+                app:layout_constraintTop_toBottomOf="@+id/cardMetodePembayaran"
+                app:layout_constraintVertical_bias="0.0">
+
+                <EditText
+                    android:id="@+id/edtKeterangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="Tambahkan catatan (opsional)"
+                    android:padding="16dp"
+                    android:textSize="14sp" />
+            </android.support.v7.widget.CardView>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/yellow"
+        android:text="@string/make_order"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

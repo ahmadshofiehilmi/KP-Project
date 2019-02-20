@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/lyt_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cartimage"
+                android:padding="4dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/cartnama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/cartimage"
+                android:text="CANADA"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/cartharga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cartnama"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@+id/cartimage"
+                android:text="RP 1.500.0000"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="85dp"
+                android:layout_toEndOf="@id/cartimage">
+
+                <TextView
+                    android:id="@+id/cartdelete"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginStart="188dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toEndOf="@+id/cartimage"
+                    android:background="@drawable/ic_clear" />
+
+                <TextView
+                    android:id="@+id/cartdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toEndOf="@+id/cartimage"
+                    android:background="@drawable/ic_keyboard_arrow_down" />
+
+                <TextView
+                    android:id="@+id/cartqty"
+                    android:layout_width="91dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="45dp"
+                    android:layout_toEndOf="@+id/cartimage"
+                    android:text="QTy" />
+
+                <TextView
+                    android:id="@+id/cartup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="150dp"
+                    android:layout_toEndOf="@+id/cartimage"
+                    android:background="@drawable/ic_keyboard_arrow_up" />
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="adam.notebook.example.com.kpproject6">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".module.profile.ProfileActivity"></activity>
+        <activity android:name=".module.checkout.CheckOutActivity" />
+        <activity android:name=".module.historyorder.HistoryOrder" />
+        <activity android:name=".module.listproduct.ListProduct" />
+        <activity android:name=".module.favorit.FavoritActivity" />
+        <activity android:name=".module.cart.CartActivity" />
+        <activity android:name=".module.register.RegisterActivity" />
+        <activity android:name=".Categories_Activity" />
+        <activity android:name=".module.list.DetailActivity" />
+        <activity android:name=".module.list.CategoryProcessor.ProcessorCategory" />
+        <activity android:name=".module.list.CategoryPrinter.PrinterCategory" />
+        <activity android:name=".module.list.CategoryPowerCable.PowerCableCategory" />
+        <activity android:name=".module.list.CategoryMouse.MouseCategory" />
+        <activity android:name=".module.list.CategoryMonitor.MonitorCategory" />
+        <activity android:name=".module.list.CategoryMobo.MoboCategory" />
+        <activity android:name=".module.list.CategoryLaptop.LaptopCategory" />
+        <activity android:name=".module.list.CategoryKeyboard.KeyboardCategory" />
+        <activity android:name=".module.list.CategoryHeadhphone.HeadphoneCategory" />
+        <activity android:name=".module.list.CategoryHdmi.HdmiCategory" />
+        <activity android:name=".module.list.CategoryCpu.CpuCategory" />
+        <activity android:name=".module.list.CategoryBattery.BatteryCategory" />
+        <activity android:name=".module.trending.TrendingActivity" />
+        <activity android:name=".module.category.CategoriesActivity" />
+        <activity android:name=".TablayoutActivity" />
+        <activity android:name=".module.login.LoginActivity" />
+        <activity android:name=".module.introsplash.SplashScreen" />
+        <activity android:name=".module.introsplash.SliderActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

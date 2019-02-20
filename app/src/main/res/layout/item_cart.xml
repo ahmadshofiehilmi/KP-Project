@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    android:background="@color/white">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="96dp"
+            android:layout_height="88dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:src="@drawable/ic_action_exit"
+            android:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nama_barang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnRemove"
+            app:layout_constraintStart_toEndOf="@+id/imgProduct"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nama barang" />
+
+        <ImageButton
+            android:id="@+id/btnMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:src="@drawable/ic_minus"
+            app:layout_constraintBottom_toBottomOf="@+id/tvQty"
+            app:layout_constraintEnd_toStartOf="@+id/tvQty"
+            app:layout_constraintTop_toTopOf="@+id/tvQty" />
+
+        <TextView
+            android:id="@+id/tvQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="32dp"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_total_harga"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nama_barang"
+            app:layout_constraintStart_toStartOf="@+id/tv_nama_barang"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama_barang"
+            tools:text="0" />
+
+        <ImageButton
+            android:id="@+id/btnPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:src="@drawable/ic_add_box"
+            app:layout_constraintBottom_toBottomOf="@+id/tvQty"
+            app:layout_constraintStart_toEndOf="@+id/tvQty"
+            app:layout_constraintTop_toTopOf="@+id/tvQty" />
+
+        <TextView
+            android:id="@+id/tv_harga_satuan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent80"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgProduct"
+            app:layout_constraintEnd_toEndOf="@+id/imgProduct"
+            app:layout_constraintStart_toStartOf="@+id/imgProduct"
+            tools:text="Rp 10.000" />
+
+        <TextView
+            android:id="@+id/tv_total_harga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_harga_satuan"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nama_barang"
+            app:layout_constraintStart_toStartOf="@+id/tv_nama_barang"
+            tools:text="Rp 50.000" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

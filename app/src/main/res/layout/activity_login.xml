@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    tools:context=".module.login.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/laptop_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="INDOMPTER"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="30sp" />
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp">
+
+
+            <EditText
+                android:id="@+id/edit_emaillogin"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="email"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:background="#eeeeee"
+                android:inputType="textEmailAddress" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+
+            <EditText
+                android:id="@+id/edit_passwordlogin"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:hint="password"
+                android:textSize="14sp"
+                android:background="#eeeeee"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/im_hidelogin"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/eye"
+                android:layout_gravity="end|center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:visibility="gone"
+                android:theme="@style/AppTheme"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_400"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="Login" />
+
+
+        </FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Daftar Akun"
+            android:textStyle="normal|italic"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="90dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:background="@color/black" />
+    </LinearLayout>
+</RelativeLayout>
