@@ -27,7 +27,7 @@ public class ProfilePresenter {
                         if (response.body() != null) {
                             if (response.body().getStatus()) {
                                 callback.onSuccess();
-                                pref.updateToken(response.body().getNewToken());
+//                                pref.updateToken(response.body().getNewToken());
                             } else {
                                 callback.onFailed(response.body().getMessage());
                             }

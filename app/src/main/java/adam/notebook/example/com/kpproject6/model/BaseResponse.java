@@ -10,8 +10,8 @@ public class BaseResponse<T> {
     private Boolean status;
     @SerializedName("message")
     private String message;
-    @SerializedName("new_token")
-    private String newToken;
+//    @SerializedName("new_token")
+//    private String newToken;
     @SerializedName("user")
     private T data;
 
@@ -39,13 +39,13 @@ public class BaseResponse<T> {
         this.message = message;
     }
 
-    public String getNewToken() {
-        return newToken;
-    }
-
-    public void setNewToken(String newToken) {
-        this.newToken = newToken;
-    }
+//    public String getNewToken() {
+//        return newToken;
+//    }
+//
+//    public void setNewToken(String newToken) {
+//        this.newToken = newToken;
+//    }
 
     public T getData() {
         return data;
