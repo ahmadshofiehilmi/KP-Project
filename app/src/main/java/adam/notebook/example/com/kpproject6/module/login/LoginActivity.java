@@ -13,6 +13,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import adam.notebook.example.com.kpproject6.GeneralUtility.PreferenceUtils.PreferenceUtils;
+import adam.notebook.example.com.kpproject6.GeneralUtility.Utils;
 import adam.notebook.example.com.kpproject6.R;
 import adam.notebook.example.com.kpproject6.TablayoutActivity;
 import adam.notebook.example.com.kpproject6.service.login.LoginPresenter;
@@ -42,12 +44,21 @@ public class LoginActivity extends AppCompatActivity implements ServiceCallback 
     ProgressBar progressBar;
 
     private boolean isPasswordVisible = false;
+    PreferenceUtils sharedPrefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+//        // Code berikut berfungsi untuk mengecek session, Jika session true ( sudah login )
+//        // maka langsung memulai MainActivity.
+//        if (sharedPrefManager.isLoggedIn()){
+//            startActivity(new Intent(LoginActivity.this, TablayoutActivity.class)
+//                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+//            finish();
+//        }
 
         imHide.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,17 +78,29 @@ public class LoginActivity extends AppCompatActivity implements ServiceCallback 
 
     @OnClick(R.id.btn_login)
     public void login(View view) {
-        final String email = editEmail.getText().toString();
+        final String useremail = editEmail.getText().toString();
         final String password = editPassword.getText().toString();
-        if (email.isEmpty() || password.isEmpty()) {
+        if (useremail.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Masukkan email dan password", Toast.LENGTH_SHORT).show();
+            return;
+
+        }
+        if (!Utils.isValidEmail(useremail)) {
+            Toast.makeText(this, "Email yang anda masukkan tidak valid", Toast.LENGTH_SHORT).show();
             return;
         }
 
+        String email = "";
+        if (useremail.contains("@")){
+            email = useremail;
+        }
+
         LoginPresenter.login(email, password, this);
+
         Intent intent_log = new Intent(LoginActivity.this, TablayoutActivity.class);
         startActivity(intent_log);
         finish();
+
     }
 
     @OnClick(R.id.tv_register)
