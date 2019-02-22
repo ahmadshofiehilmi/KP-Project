@@ -157,14 +157,12 @@ public class TablayoutActivity extends AppCompatActivity{
     @Override
     public void onBackPressed() {
         ExitApp();
-        //super.onBackPressed();
     }
 
     private void ExitApp() {
         new AlertDialog.Builder(TablayoutActivity.this)
                 .setTitle(getString(R.string.app_name))
                 .setMessage(getString(R.string.exit_msg))
-//                .setIcon(R.mipmap.ic_launcherbr)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
